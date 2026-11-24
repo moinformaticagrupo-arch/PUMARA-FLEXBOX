@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Práctico 1: maquetado web utilizando Flexbox.">
+  <title>Práctico 1 | Maquetando con Flexbox</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- ENCABEZADO: Flexbox distribuye el logotipo y los enlaces horizontalmente. -->
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#inicio"><span class="brand-mark">F</span> Flex<span>Studio</span></a>
+      <nav aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#galeria">Galería</a>
+      </nav>
+      <a class="nav-button" href="#contacto">Contactar</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- PORTADA: Flexbox coloca el texto y la imagen uno al lado del otro y los centra verticalmente. -->
+    <section class="hero" id="inicio">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">DISEÑO WEB · CREATIVIDAD · TECNOLOGÍA</p>
+          <h1>Ideas simples.<br><span>Diseños increíbles.</span></h1>
+          <p class="hero-text">Una muestra práctica de cómo organizar elementos en una página web utilizando CSS Flexbox.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#galeria">Ver galería</a>
+            <a class="button button-light" href="#servicios">Conocer más</a>
+          </div>
+        </div>
+        <div class="hero-art" role="img" aria-label="Ilustración abstracta de diseño web">
+          <div class="art-card card-back"></div>
+          <div class="art-card card-front">
+            <div class="art-top"><i></i><i></i><i></i></div>
+            <div class="art-line wide"></div><div class="art-line"></div>
+            <div class="art-blocks"><b></b><b></b><b></b></div>
+            <div class="art-footer"></div>
+          </div>
+          <div class="floating-tag">CSS + FLEXBOX</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICIOS: Flexbox permite que las tarjetas se distribuyan en filas y pasen a otra línea si falta espacio. -->
+    <section class="section" id="servicios">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">¿QUÉ PODEMOS HACER?</p>
+          <h2>Diseño con propósito</h2>
+          <p>Una estructura clara ayuda a que cada contenido encuentre su lugar.</p>
+        </div>
+        <div class="services">
+          <article class="service">
+            <div class="service-icon purple">✦</div>
+            <h3>Diseño creativo</h3>
+            <p>Composiciones atractivas, modernas y fáciles de recorrer.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon orange">▦</div>
+            <h3>Diseño adaptable</h3>
+            <p>Elementos que se acomodan a distintos tamaños de pantalla.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon green">⌘</div>
+            <h3>Código ordenado</h3>
+            <p>HTML y CSS organizados para facilitar su mantenimiento.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA: Flexbox organiza las imágenes en filas con separación uniforme y permite el ajuste automático. -->
+    <section class="gallery-section" id="galeria">
+      <div class="container">
+        <div class="section-heading gallery-heading">
+          <p class="eyebrow">INSPIRACIÓN VISUAL</p>
+          <h2>Galería de proyectos</h2>
+          <p>Ejemplos de imágenes presentadas en una galería flexible.</p>
+        </div>
+        <div class="gallery">
+          <article class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=85" alt="Espacio de trabajo con computadora">
+            <div class="gallery-caption"><span>01 / TECNOLOGÍA</span><h3>Espacios digitales</h3></div>
+          </article>
+          <article class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=900&q=85" alt="Escritorio moderno con computadora">
+            <div class="gallery-caption"><span>02 / PRODUCTIVIDAD</span><h3>Ideas en acción</h3></div>
+          </article>
+          <article class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=900&q=85" alt="Diseño de interfaz en una pantalla">
+            <div class="gallery-caption"><span>03 / CREATIVIDAD</span><h3>Diseño visual</h3></div>
+          </article>
+          <article class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=85" alt="Personas trabajando con tecnología">
+            <div class="gallery-caption"><span>04 / EQUIPO</span><h3>Trabajo colaborativo</h3></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO: Flexbox alinea el mensaje y el botón y mantiene el contenido centrado verticalmente. -->
+    <section class="contact" id="contacto">
+      <div class="container contact-inner">
+        <div><p class="eyebrow">¿EMPEZAMOS?</p><h2>Todo gran proyecto empieza con una idea.</h2></div>
+        <a class="button button-primary" href="mailto:contacto@flexstudio.com">Escribinos ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA: Flexbox separa los datos del proyecto y el texto de cierre. -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="#inicio"><span class="brand-mark">F</span> Flex<span>Studio</span></a>
+      <p>Práctico 1 · Maquetando con Flexbox</p>
+      <p>Hecho para aprender · 2026</p>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>

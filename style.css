@@ -1,0 +1,113 @@
+/* CONFIGURACIÓN GENERAL */
+:root {
+  --ink: #172033;
+  --muted: #697386;
+  --purple: #6746e8;
+  --purple-dark: #5032c8;
+  --soft: #f6f5fb;
+  --line: #e9e7f1;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: "DM Sans", Arial, sans-serif; color: var(--ink); }
+a { color: inherit; text-decoration: none; }
+.container { width: min(1120px, calc(100% - 48px)); margin: 0 auto; }
+
+/* ENCABEZADO: display:flex alinea marca, menú y botón en un mismo eje horizontal. */
+.header { background: #fff; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; }
+.nav { min-height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+.brand { display: inline-flex; align-items: center; gap: 8px; font-size: 20px; font-weight: 800; letter-spacing: -1px; }
+.brand > span:last-child { color: var(--purple); margin-left: -7px; }
+.brand-mark { width: 34px; height: 34px; border-radius: 11px; background: var(--purple); color: white; display: inline-flex; align-items: center; justify-content: center; }
+.nav nav { display: flex; align-items: center; gap: 34px; color: #626b7d; font-size: 14px; font-weight: 600; }
+.nav nav a:hover { color: var(--purple); }
+.nav-button { background: var(--ink); color: white; padding: 12px 19px; border-radius: 9px; font-size: 13px; font-weight: 700; }
+
+/* PORTADA: flex-direction:row crea dos columnas; align-items:center centra ambas verticalmente. */
+.hero { background: radial-gradient(circle at 82% 30%, #e9e3ff 0, transparent 30%), linear-gradient(120deg, #f7f6ff, #fff 70%); overflow: hidden; }
+.hero-inner { min-height: 570px; display: flex; align-items: center; justify-content: space-between; gap: 60px; padding-top: 60px; padding-bottom: 60px; }
+.hero-copy { flex: 1 1 52%; }
+.eyebrow { color: var(--purple); font-size: 11px; font-weight: 800; letter-spacing: 2px; margin: 0 0 18px; }
+h1 { font-size: clamp(42px, 6vw, 68px); line-height: 1.06; letter-spacing: -3px; margin: 0; }
+h1 span { color: var(--purple); }
+.hero-text { color: var(--muted); max-width: 490px; line-height: 1.8; font-size: 16px; margin: 24px 0 30px; }
+.hero-actions { display: flex; align-items: center; gap: 13px; flex-wrap: wrap; }
+.button { display: inline-flex; justify-content: center; align-items: center; padding: 14px 21px; border-radius: 9px; font-size: 14px; font-weight: 700; transition: transform .2s, background .2s; }
+.button:hover { transform: translateY(-2px); }
+.button-primary { background: var(--purple); color: white; }
+.button-primary:hover { background: var(--purple-dark); }
+.button-light { background: white; border: 1px solid var(--line); }
+.hero-art { flex: 0 1 430px; height: 340px; position: relative; display: flex; align-items: center; justify-content: center; }
+.art-card { width: 290px; height: 235px; border-radius: 18px; position: absolute; box-shadow: 0 25px 70px #39218b25; }
+.card-back { background: #b9a9ff; transform: rotate(9deg) translate(18px, 4px); }
+.card-front { background: white; padding: 20px; transform: rotate(-5deg); }
+.art-top { display: flex; gap: 6px; margin-bottom: 26px; }
+.art-top i { width: 8px; height: 8px; border-radius: 50%; background: #e4e0f1; }
+.art-line { height: 9px; width: 55%; background: #eae7f4; border-radius: 8px; margin: 12px 0; }
+.art-line.wide { width: 82%; height: 15px; background: #b9a9ff; }
+.art-blocks { display: flex; gap: 10px; margin-top: 23px; }
+.art-blocks b { flex: 1; height: 65px; border-radius: 9px; background: #eeeaff; }
+.art-blocks b:nth-child(2) { background: #ffe5d6; }
+.art-blocks b:nth-child(3) { background: #dff4e9; }
+.art-footer { height: 8px; width: 70%; background: #eeeaf6; border-radius: 8px; margin-top: 17px; }
+.floating-tag { position: absolute; right: 0; bottom: 28px; background: var(--ink); color: white; padding: 12px 17px; border-radius: 10px; font-size: 11px; font-weight: 800; letter-spacing: 1px; box-shadow: 0 10px 30px #17203330; }
+
+/* SERVICIOS: flex-wrap hace que las tarjetas bajen a otra fila en pantallas angostas. */
+.section { padding: 100px 0; }
+.section-heading { text-align: center; max-width: 620px; margin: 0 auto 48px; }
+.section-heading .eyebrow { margin-bottom: 12px; }
+h2 { font-size: clamp(30px, 4vw, 42px); letter-spacing: -1.6px; margin: 0 0 13px; }
+.section-heading > p:last-child { color: var(--muted); margin: 0; line-height: 1.7; }
+.services { display: flex; flex-wrap: wrap; gap: 22px; }
+.service { flex: 1 1 250px; border: 1px solid var(--line); border-radius: 15px; padding: 30px; background: white; }
+.service-icon { width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; border-radius: 13px; font-size: 24px; font-weight: 700; margin-bottom: 23px; }
+.purple { background: #eeeaff; color: var(--purple); }
+.orange { background: #fff0e7; color: #ed8b45; }
+.green { background: #e6f7ef; color: #2b9b68; }
+.service h3 { margin: 0 0 10px; font-size: 18px; }
+.service p { color: var(--muted); font-size: 14px; line-height: 1.7; margin: 0; }
+
+/* GALERÍA: flex-wrap distribuye las imágenes; flex-basis define el ancho inicial de cada tarjeta. */
+.gallery-section { background: var(--soft); padding: 95px 0 105px; }
+.gallery { display: flex; flex-wrap: wrap; gap: 20px; }
+.gallery-item { flex: 1 1 calc(50% - 20px); min-width: 260px; height: 285px; position: relative; overflow: hidden; border-radius: 15px; background: #ddd; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .45s; }
+.gallery-item:hover img { transform: scale(1.06); }
+.gallery-item::after { content: ""; position: absolute; inset: 35% 0 0; background: linear-gradient(transparent, #111827d9); }
+.gallery-caption { position: absolute; z-index: 1; bottom: 22px; left: 24px; color: white; }
+.gallery-caption span { font-size: 10px; font-weight: 800; letter-spacing: 1.5px; color: #d9d0ff; }
+.gallery-caption h3 { font-size: 21px; margin: 7px 0 0; }
+
+/* CONTACTO: flex distribuye el texto y el botón; align-items:center los alinea verticalmente. */
+.contact { padding: 75px 0; background: #fff; }
+.contact-inner { display: flex; justify-content: space-between; align-items: center; gap: 30px; }
+.contact-inner .eyebrow { margin-bottom: 10px; }
+.contact-inner h2 { max-width: 650px; margin: 0; }
+
+/* PIE DE PÁGINA: justify-content:space-between separa los tres elementos. */
+.footer { background: #171d2b; color: #c8ccda; padding: 25px 0; }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.footer-brand { color: white; }
+.footer-inner p { font-size: 12px; margin: 0; }
+
+/* DISEÑO RESPONSIVE: cambia la dirección de Flexbox para mantener la lectura en celulares. */
+@media (max-width: 760px) {
+  .container { width: min(100% - 36px, 560px); }
+  .nav { min-height: 70px; flex-wrap: wrap; gap: 12px; padding-top: 12px; padding-bottom: 12px; }
+  .nav nav { order: 3; width: 100%; justify-content: center; gap: 25px; padding: 8px 0 3px; }
+  .nav-button { margin-left: auto; }
+  .hero-inner { flex-direction: column; align-items: flex-start; gap: 25px; padding-top: 65px; }
+  .hero-art { align-self: center; width: 100%; max-width: 400px; height: 290px; }
+  .art-card { transform-origin: center; }
+  .card-back { transform: rotate(9deg) translate(12px, 0); }
+  .card-front { transform: rotate(-5deg); }
+  .floating-tag { right: 2px; bottom: 12px; }
+  .section, .gallery-section { padding: 70px 0; }
+  .contact-inner { flex-direction: column; align-items: flex-start; }
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 430px) {
+  h1 { letter-spacing: -2px; }
+  .gallery-item { flex-basis: 100%; min-width: 0; height: 245px; }
+  .nav nav { gap: 17px; font-size: 13px; }
+}
